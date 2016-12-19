@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jmdembe/final-project/issues"
   },
-  "homepage": "https://github.com/jmdembe/final-project#readme"
+  "homepage": "https://github.com/jmdembe/final-project#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  }
 }
