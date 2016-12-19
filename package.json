@@ -1,0 +1,19 @@
+{
+  "name": "iron-yard-final-project",
+  "version": "1.0.0",
+  "description": "Final project for The Iron Yard-Fall 2016 cohort",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmdembe/final-project.git"
+  },
+  "author": "Jessica Dembe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmdembe/final-project/issues"
+  },
+  "homepage": "https://github.com/jmdembe/final-project#readme"
+}
