@@ -19,6 +19,6 @@
         name: 'dashboard',
         url: '/dashboard',
         templateUrl: 'input.template.html'
-      })
+      });
   }
 }());

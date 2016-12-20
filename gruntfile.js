@@ -5,6 +5,17 @@ module.exports = function(grunt) {
   grunt.initConfig ({
     clean: ['build/'],
 
+    jshint: {
+      options: {
+        jshintrc: '.jshintrc',
+        ignores: [ 'node_modules/**' ]
+      },
+      source: {
+        files: {
+          src: ['src/js/**/*.js']
+        }
+      },
+    },
     copy: {
       html: {
         files: [
@@ -39,8 +50,9 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', [ 'clean', 'copy', 'sass' ]);
+    grunt.registerTask('default', [ 'clean', 'jshint', 'copy', 'sass' ]);
 };
