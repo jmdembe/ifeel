@@ -10,15 +10,9 @@
     $stateProvider
 
       .state({
-        name: 'home',
-        url: '',
-        templateUrl: 'views/login.template.html'
-      })
-
-      .state({
         name: 'dashboard',
-        url: '/dashboard',
-        templateUrl: 'input.template.html'
+        url: '',
+        templateUrl: 'views/input.template.html'
       });
   }
 }());

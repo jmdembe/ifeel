@@ -22,15 +22,31 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'src/',
-            src: 'index.html',
+            src: '**/*.html',
             dest: 'build/'
           }
         ]
-      }
+      },
+      vendorjs: {
+        files: [
+          {
+            expand: true,
+            cwd: 'node_modules/angular',
+            src: [ 'angular.js' ],
+            dest: 'build/js/'
+          },
+          {
+            expand: true,
+            cwd: 'node_modules/angular-ui-router/release',
+            src: [ 'angular-ui-router.js' ],
+            dest: 'build/js/'
+          }
+        ]
+      },
     },
     watch: {
       html: {
-        files: ['src/index.html'],
+        files: ['src/index.html', 'src/views/**'],
         tasks: ['copy:html']
       },
       sass: {
@@ -45,6 +61,12 @@ module.exports = function(grunt) {
         }
       }
     },
+    concat: {
+      js: {
+        src: [ 'src/js/ifeel.module.js', 'src/js/**/*.js' ],
+        dest: 'build/js/app.js'
+      }
+    },
 
   });
 
@@ -53,6 +75,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
-    grunt.registerTask('default', [ 'clean', 'jshint', 'copy', 'sass' ]);
+    grunt.registerTask('default', [ 'clean', 'jshint', 'copy', 'concat', 'sass' ]);
 };
