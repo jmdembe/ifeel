@@ -37,6 +37,16 @@ module.exports = function(grunt) {
           }
         ]
       },
+      css: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/',
+            src: 'css/**/*.*',
+            dest: 'build/'
+          }
+        ]
+      },
       vendorjs: {
         files: [
           {
@@ -64,10 +74,14 @@ module.exports = function(grunt) {
         tasks: ['sass']
       }
     },
-    images: {
+      images: {
         files: ['src/img/**'],
         tasks: ['copy:img']
-     },
+      },
+      normalize: {
+        files: ['src/css/**'],
+        tasks: ['copy:css']
+      },
     sass: {
       styles: {
         files: {
