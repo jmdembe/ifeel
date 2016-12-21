@@ -1,3 +1,7 @@
+form {
+  margin: 0 auto;
+}
+
 fieldset {
   border: none;
 }
@@ -8,4 +12,14 @@ legend  {
 
 label {
   display: block;
+}
+
+input {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+img {
+  padding: .25em;
 }
