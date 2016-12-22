@@ -12,7 +12,9 @@
       .state({
         name: 'dashboard',
         url: '',
-        templateUrl: 'views/input.template.html'
+        templateUrl: 'views/input.template.html',
+        controller: 'MoodController',
+        controlelrAs: 'mood'
       });
   }
 }());

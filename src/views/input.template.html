@@ -1,12 +1,12 @@
     <h1>Hello!</h1>
-    <form class='intake'>
+    <form name='intake' ng-controller='MoodController as mood' ng-submit='mood.getMood(mood.userMood)'>
       <fieldset class='feeling'>
         <legend>How are you feeling today?</legend>
-        <input type='image' alt='angry' name='mood' src='/img/Angry-Smiley-Face-300px.png' value='angry'/>
-        <input type='image' alt='unhappy' name='mood'src='/img/Unhappy-Face-300px.png' value='notgood'/>
-        <input type='image' alt='okay' name='mood' src='/img/Neutral-Smiley-Face-300px.png'value='okay'/>
-        <input type='image' alt='good' name='mood' src='/img/Sincere-Smiley-Face-300px.png' value='good'/>
-        <input type='image' alt='great' name='mood' src='/img/Awesome-smiley-300px0.png' value='great'/>
+        <input type='image' alt='angry' name='angry' ng-click='mood.userMood = "angry"' src='/img/Angry-Smiley-Face-300px.png'>
+        <input type='image' alt='unhappy' name='notgood' ng-click='mood.userMood="notgood"'src='/img/Unhappy-Face-300px.png'>
+        <input type='image' alt='okay' name='okay' ng-click='mood.userMood="okay"'src='/img/Neutral-Smiley-Face-300px.png'>
+        <input type='image' alt='good' name='good' ng-click='mood.userMood="good"' src='/img/Sincere-Smiley-Face-300px.png'>
+        <input type='image' alt='great' name='great' ng-click='mood.userMood="great"' src='/img/Awesome-smiley-300px0.png'>
       </fieldset>
       <nav>
         <ul>
