@@ -15,6 +15,11 @@
         templateUrl: 'views/input.template.html',
         controller: 'MoodController',
         controlelrAs: 'mood'
+      })
+      .state({
+        name: 'submitted',
+        url: '/confirm',
+        templateUrl: 'views/confirm.template.html'
       });
   }
 }());

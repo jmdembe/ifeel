@@ -2,7 +2,7 @@
   "name": "iron-yard-final-project",
   "version": "1.0.0",
   "description": "Final project for The Iron Yard-Fall 2016 cohort",
-  "main": "app.js",
+  "main": "src/server/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,6 +28,7 @@
   "dependencies": {
     "angular": "^1.6.0",
     "angular-ui-router": "^0.3.2",
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mongodb": "^2.2.16"
   }
