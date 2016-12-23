@@ -12,7 +12,7 @@ module.exports = function(grunt) {
       },
       source: {
         files: {
-          src: ['src/js/**/*.js']
+          src: ['src/client/js/**/*.js']
         }
       },
     },
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'src/',
-            src: 'img/**/*.*',
+            src: 'client/img/**/*.*',
             dest: 'build/'
           }
         ]
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'src/',
-            src: 'css/**/*.*',
+            src: 'client/css/**/*.*',
             dest: 'build/'
           }
         ]
@@ -66,32 +66,32 @@ module.exports = function(grunt) {
     },
     watch: {
       html: {
-        files: ['src/index.html', 'src/views/**'],
+        files: ['src/index.html', 'src/client/views/**'],
         tasks: ['copy:html']
       },
       sass: {
-        files: ['src/sass/**/*.scss'],
+        files: ['src/client/sass/**/*.scss'],
         tasks: ['sass']
       }
     },
       images: {
-        files: ['src/img/**'],
+        files: ['src/client/img/**'],
         tasks: ['copy:img']
       },
       normalize: {
-        files: ['src/css/**'],
+        files: ['src/client/css/**'],
         tasks: ['copy:css']
       },
     sass: {
       styles: {
         files: {
-          'build/css/style.css': 'src/sass/main.scss'
+          'build/css/style.css': 'src/client/sass/main.scss'
         }
       }
     },
     concat: {
       js: {
-        src: [ 'src/js/ifeel.module.js', 'src/js/**/*.js' ],
+        src: [ 'src/client/js/ifeel.module.js', 'src/client/js/**/*.js' ],
         dest: 'build/js/app.js'
       }
     },
