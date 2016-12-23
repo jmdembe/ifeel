@@ -1,4 +1,3 @@
-(function() {
   'use strict';
 
   var express = require('express');
@@ -18,7 +17,14 @@
   });
 
   router.get(':/id', function getToday(req, res) {
-
+    moodModel.getOne(req.params.id, dataRetrieved(err, data) {
+      if(err) {
+        console.error(err);
+        res.status(500).send('Failed to retrieve your job');
+        return;
+      }
+      res.json(data);
+    });
   });
+
   module.exports=router;
-}());

@@ -5,7 +5,7 @@ module.exports = {
   getAll,
   getToday,
   createToday
-}
+};
 
 function getAll(done) {
   dbConnect(function connectHandler(err, db) {
