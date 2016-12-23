@@ -8,6 +8,8 @@ server.set('port', process.env.PORT || 3000);
 server.use(bodyParser.json());
 server.use(express.static('build/'));
 
+server.use('/mood', require('./routes/mood'));
+
 server.listen(server.get('port'), function serverStarted(err){
     if (err) {
       console.error(err, 'ERROR');
