@@ -14,7 +14,7 @@
         url: '',
         templateUrl: 'views/input.template.html',
         controller: 'MoodController',
-        controlelrAs: 'mood'
+        controllerAs: 'mood'
       })
       .state({
         name: 'submitted',

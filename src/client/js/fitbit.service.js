@@ -8,7 +8,7 @@
 
     function FitBitService($http) {
       return {
-        getActivity: getActivity,
+        getActivity: getActivity
       };
 
       function getActivity() {
