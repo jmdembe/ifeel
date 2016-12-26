@@ -4,7 +4,9 @@
   angular.module('ifeel')
     .controller('LoginController', LoginController);
 
-    function LoginController($state) {
+    LoginController.$inject = ['$state', 'LoginService'];
+    
+    function LoginController($state, LoginService) {
       this.user = {};
 
       this.userLogin = function userLogin(user){
