@@ -10,8 +10,20 @@
     $stateProvider
 
       .state({
+        name: 'home',
+        url:'',
+        templateUrl: 'views/landing.template.html'
+      })
+      .state({
+        name: 'login',
+        url:'/login',
+        templateUrl: 'views/login.template.html',
+        controller: 'LoginController',
+        controllerAs: 'login'
+      })
+      .state({
         name: 'dashboard',
-        url: '',
+        url: '/dashboard',
         templateUrl: 'views/input.template.html',
         controller: 'MoodController',
         controllerAs: 'mood'

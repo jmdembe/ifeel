@@ -1,3 +1,10 @@
 <section class='login'>
   <h1>Login</h1>
+  <form class='userlogin' name='userform' ng-submit='userform.$valid && login.userLogin(login.user)'>
+    <label class='loginlabel' for='email'>Email</label>
+    <input class='logininput' ng-model='login.user.email' placeholder='E-mail Address' type='email'>
+    <label class='loginlabel' for='password'>Password</label>
+    <input class='logininput' ng-model='login.user.password' type='password' placeholder='Password'>
+
+  </form>
 </section>
