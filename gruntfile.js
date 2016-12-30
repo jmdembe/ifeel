@@ -15,6 +15,11 @@ module.exports = function(grunt) {
           src: ['src/client/js/**/*.js']
         }
       },
+      server: {
+        files: {
+          server: ['src/server/**/*.js']
+        }
+      },
     },
     copy: {
       html: {
