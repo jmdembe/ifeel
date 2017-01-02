@@ -71,14 +71,13 @@ module.exports = function(grunt) {
     },
     watch: {
       html: {
-        files: ['src/index.html', 'src/client/views/**'],
+        files: ['src/client/index.html', 'src/client/views/**'],
         tasks: ['copy:html']
       },
       sass: {
         files: ['src/client/sass/**/*.scss'],
         tasks: ['sass']
-      }
-    },
+      },
       images: {
         files: ['src/client/img/**'],
         tasks: ['copy:img']
@@ -87,6 +86,12 @@ module.exports = function(grunt) {
         files: ['src/client/css/**'],
         tasks: ['copy:css']
       },
+      js: {
+        files: ['src/client/js/**/*.js'],
+        tasks: ['jshint', 'concat']
+      }
+
+    },
     sass: {
       styles: {
         files: {
@@ -110,5 +115,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
 
-    grunt.registerTask('default', [ 'clean', 'jshint', 'copy', 'concat', 'sass' ]);
+  grunt.registerTask('default', [ 'clean', 'jshint', 'copy', 'concat', 'sass' ]);
 };

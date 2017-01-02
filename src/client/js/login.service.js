@@ -7,14 +7,23 @@
   LoginService.$inject = ['$http'];
 
   function LoginService() {
-    var token;
+
+    var profile = null;
 
     return {
-      isLoggedIn: isLoggedIn
+      storeBasicProfile: storeBasicProfile,
+      retrieveProfileInfo: retrieveProfileInfo
     };
 
-    function isLoggedIn() {
-      return token;
+    function storeBasicProfile(user) {
+      profile = user.getBasicProfile();
+      console.log('profile info', profile);
     }
+
+    function retrieveProfileInfo() {
+      return profile;
+    }
+
+
   }
 }());
