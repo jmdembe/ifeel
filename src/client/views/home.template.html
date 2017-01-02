@@ -1,4 +1,7 @@
-<h1>Let's get started!</h1>
-<ul>
-  <li>Login</li>
-</ul>
+<section>
+  <h1>Let's get started!</h1>
+  <ul>
+    <li><a ui-sref='login'>Login</a></li>
+    <li><a ui-sref='dashboard' ng-if='login.userLogin'>Dashboard</a></li>
+  </ul>
+</section>
