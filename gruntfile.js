@@ -109,6 +109,37 @@ module.exports = function(grunt) {
         src: [ 'src/client/js/ifeel.module.js', 'src/client/js/**/*.js' ],
         dest: 'build/js/app.js'
       }
+    },
+    karma: {
+      options: {
+        frameworks: ['mocha', 'chai'],
+        client: {
+          mocha: {
+            ui: 'bdd'
+          }
+        },
+        browsers:['PhantomJS'],
+        singleRun: true,
+        preprocessors: {
+          'src/js/**/*.js': ['coverage']
+        },
+        reporters: ['dots', 'coverage'],
+        coverageReporter: {
+          type: 'text-summary'
+        }
+      },
+      iFeel: {
+        options: {
+          files: [
+            'node_modules/angular/angular.js',
+            'node_modules/angular-ui-router/release/angular-ui-router.js',
+            'node_modules/angular-mocks/angular-mocks.js',
+            'src/client/js/ifeel.module.js',
+            'src/client/js/login.service.js',
+            'test/specs/login.service.spec.js'
+          ]
+        }
+      }
     }
 
   });
@@ -124,5 +155,5 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', [ 'clean', 'jshint', 'copy', 'concat', 'sass' ]);
-  grunt.registerTask('test', ['jshint', 'karma']);
+  grunt.registerTask('test', [ 'karma']);
 };
