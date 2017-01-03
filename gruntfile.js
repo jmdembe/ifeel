@@ -154,6 +154,6 @@ module.exports = function(grunt) {
 
 
 
-  grunt.registerTask('default', [ 'clean', 'copy', 'concat', 'sass' ]);
+  grunt.registerTask('default', [ 'clean', 'jshint', 'copy', 'concat', 'sass' ]);
   grunt.registerTask('test', [ 'karma']);
 };
