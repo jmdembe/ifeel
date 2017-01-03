@@ -90,6 +90,7 @@
     "globals"       : {
       "angular"     : true,
       "chai"        : true,
+      "expect"      : true,
       "gapi"        : true,
       "inject"      : true
       }        // additional predefined global variables

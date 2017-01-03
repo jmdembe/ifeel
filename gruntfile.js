@@ -109,7 +109,7 @@ module.exports = function(grunt) {
         src: [ 'src/client/js/ifeel.module.js', 'src/client/js/**/*.js' ],
         dest: 'build/js/app.js'
       }
-    },
+    }
 
   });
 

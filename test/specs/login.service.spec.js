@@ -4,16 +4,21 @@
 
     var expect= chai.expect;
 
-    describe('Mood Service', function() {
-      var MoodService;
+    describe('Login Service', function() {
+      var LoginService;
 
       beforeEach(module('ifeel'));
 
-      beforeEach(inject(function(_MoodService_){
-          MoodService = _MoodService_;
+      beforeEach(inject(function(_LoginService_){
+          LoginService = _LoginService_;
       }));
+
+      it('Should be able to get profile information after login', function() {
+          var result = LoginService.getBasicProfile();
+          expect(result).to.be.an('object');
+      });
     });
 
-    
+
 
 }());
