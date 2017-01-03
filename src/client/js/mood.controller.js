@@ -4,9 +4,9 @@
   angular.module('ifeel')
     .controller('MoodController', MoodController);
 
-  MoodController.$inject = ['$stateParams', '$state'];
+  MoodController.$inject = ['MoodService', '$state'];
 
-    function MoodController() {
+    function MoodController($state) {
       console.log('Creating Mood Controller');
       this.userMood={};
       this.mood = null;
@@ -21,6 +21,7 @@
       vm.getMood = function getMood(mood) {
         vm.mood=mood;
         console.log('This is your mood', mood);
+        $state.go('submitted');
       };
     }
 }());
