@@ -89,6 +89,8 @@
     // Custom Globals
     "globals"       : {
       "angular"     : true,
-      "gapi"        : true
+      "chai"        : true,
+      "gapi"        : true,
+      "inject"      : true
       }        // additional predefined global variables
 }
