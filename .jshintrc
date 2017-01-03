@@ -92,6 +92,7 @@
       "chai"        : true,
       "expect"      : true,
       "gapi"        : true,
-      "inject"      : true
+      "inject"      : true,
+      "karma"       : true
       }        // additional predefined global variables
 }

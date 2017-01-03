@@ -4,13 +4,14 @@
   angular.module('ifeel')
     .controller('MoodController', MoodController);
 
-  MoodController.$inject = ['MoodService', '$state'];
+    MoodController.$inject = ['MoodService', '$state'];
 
-    function MoodController(MoodService, $state) {
+    function MoodController() {
       console.log('Creating Mood Controller');
       this.userMood={};
       this.mood = null;
       var vm=this;
+
 
       /**
        * getMood takes the user click (the user's mood) and sends the mood to the service and the
