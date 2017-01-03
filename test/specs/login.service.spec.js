@@ -6,16 +6,24 @@
 
     describe('Login Service', function() {
       var LoginService;
+      var $httpBackend;
 
       beforeEach(module('ifeel'));
 
-      beforeEach(inject(function(_LoginService_){
+      beforeEach(inject(function(_$httpBackend_,_LoginService_){
+          $httpBackend = _$httpBackend_;
           LoginService = _LoginService_;
       }));
 
       it('Should be able to get profile information after login', function() {
-          var result = LoginService.getBasicProfile();
-          expect(result).to.be.an('object');
+          var fakeGoogleUser = {
+            getBasicProfile: function fakegetBasicProfile() {
+                return {name: 'Jessica', email: 'jmdembe@gmail.com'};
+            }
+          };
+          var result = LoginService.storeBasicProfile(fakeGoogleUser);
+          console.log(result);
+          expect(result).to.be.undefined;
       });
     });
 
