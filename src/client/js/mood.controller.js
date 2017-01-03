@@ -6,22 +6,20 @@
 
   MoodController.$inject = ['MoodService', '$state'];
 
-    function MoodController($state) {
+    function MoodController(MoodService, $state) {
       console.log('Creating Mood Controller');
       this.userMood={};
       this.mood = null;
       var vm=this;
 
       /**
-       * getMood takes the user click (the user's mood) and assigns a value based
-       * on the user's click. This value is a string.
+       * getMood takes the user click (the user's mood) and sends the mood to the service and the
        *
        * @param  {String} mood [description]
        */
       vm.getMood = function getMood(mood) {
         vm.mood=mood;
         console.log('This is your mood', mood);
-        $state.go('submitted');
       };
     }
 }());
