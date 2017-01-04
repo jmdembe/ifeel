@@ -23,7 +23,7 @@
           };
           var result = LoginService.storeBasicProfile(fakeGoogleUser);
           console.log(result);
-          expect(result).to.be.undefined;
+          expect(LoginService.retrieveProfileInfo().name).to.equal('Jessica');
       });
     });
 
