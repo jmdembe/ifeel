@@ -32,7 +32,9 @@
       .state({
         name: 'submitted',
         url: '/confirm',
-        templateUrl: 'views/confirm.template.html'
+        templateUrl: 'views/confirm.template.html',
+        controller: 'MoodController',
+        controllerAs: 'mood'
       });
   }
 }());

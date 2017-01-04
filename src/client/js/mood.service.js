@@ -9,7 +9,8 @@
 
       return {
         plotMood: plotMood,
-        plotDiary: plotDiary
+        plotDiary: plotDiary,
+        getAll: getAll
       };
 
       function plotMood(mood) {
@@ -18,6 +19,11 @@
 
       function plotDiary(entry) {
         record.entry=entry;
+        console.log(record);
+      }
+
+      function getAll() {
+        return record;
       }
     }
 }());
