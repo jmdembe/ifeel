@@ -40,5 +40,9 @@
         MoodService.plotDiary(entry);
       };
 
+      vm.createToday = function createToday() {
+        MoodService.createToday(this.userMood.mood, this.userMood.entry);
+      };
+
     }
 }());
