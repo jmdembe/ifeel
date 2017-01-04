@@ -6,7 +6,7 @@
 
     MoodController.$inject = ['MoodService', '$state', '$stateParams'];
 
-    function MoodController(MoodService, $state, $stateParams) {
+    function MoodController(MoodService, $state) {
       console.log('Creating Mood Controller');
       this.userMood={};
       this.mood = null;
@@ -21,6 +21,7 @@
       vm.getMood = function getMood(mood) {
         vm.mood=mood;
         console.log('This is your mood', mood);
+        MoodService.plotMood(vm.mood);
         $state.go('dashboard');
       };
     }

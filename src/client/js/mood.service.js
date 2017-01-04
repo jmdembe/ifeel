@@ -5,12 +5,19 @@
     .factory('MoodService', MoodService);
 
     function MoodService() {
+      var record = {};
+
       return {
-        storeNotes: storeNotes
+        plotMood: plotMood,
+        plotDiary: plotDiary
       };
 
-      function storeNotes(note) {
-        return note;
+      function plotMood(mood) {
+        record.mood=mood;
+      }
+
+      function plotDiary(entry) {
+        record.entry=entry;
       }
     }
 }());
