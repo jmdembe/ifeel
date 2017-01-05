@@ -37,8 +37,6 @@
         controllerAs: 'mood',
         params: {
           theMood: null,
-          theUser: null,
-          theName:null
         }
 
       });
