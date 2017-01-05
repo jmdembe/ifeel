@@ -13,7 +13,7 @@
       };
 
       function createToday(record) {
-        record.date=Date.now();
+        record.postDate=Date.now();
         console.log(record);
         return $http({
             url: '/mood',

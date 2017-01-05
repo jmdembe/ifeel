@@ -35,7 +35,11 @@
         templateUrl: 'views/confirm.template.html',
         controller: 'MoodController',
         controllerAs: 'mood',
-        params: {themood: null}
+        params: {
+          theMood: null,
+          theUser: null,
+          theName:null
+        }
 
       });
   }

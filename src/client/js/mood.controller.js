@@ -4,9 +4,9 @@
   angular.module('ifeel')
     .controller('MoodController', MoodController);
 
-    MoodController.$inject = ['MoodService', '$state', '$stateParams'];
+    MoodController.$inject = ['MoodService', 'LoginService', '$state', '$stateParams'];
 
-    function MoodController(MoodService, $state, $stateParams) {
+    function MoodController(MoodService, LoginService, $state, $stateParams) {
       console.log('Creating Mood Controller');
       console.log($stateParams);
       this.userMood={};
@@ -14,6 +14,7 @@
       this.mood = null;
       this.entry = null;
       this.record = {};
+      this.userProfile = null;
       var vm=this;
 
       /**
@@ -24,8 +25,14 @@
        */
       vm.getMood = function getMood(mood) {
         vm.mood=mood;
+        vm.userProfile = LoginService.retrieveProfileInfo();
+        vm.userName = LoginService.retrieveProfileInfo().ofa;
         console.log('This is your mood', mood);
-        $state.go('submitted', {themood: vm.mood});
+        $state.go('submitted', {
+          theMood: vm.mood,
+          theUser: vm.userProfile,
+          theName: vm.userName
+        });
       };
 
     /**
@@ -36,17 +43,17 @@
      * @return {VOID}       [description]
      */
       vm.getJournal = function getJournal(entry) {
-        if(!$stateParams.themood) {
+        if(!$stateParams.theMood) {
           return;
         } else {
-          vm.record.mood = $stateParams.themood;
+          vm.record.mood = $stateParams.theMood;
+          vm.record.theUser = $stateParams.theUser;
+          vm.record.theName = $stateParams.theName;
           vm.record.entry = entry;
           console.log(entry);
           MoodService.createToday(vm.record);
         }
-
       };
-
 
 
     }
