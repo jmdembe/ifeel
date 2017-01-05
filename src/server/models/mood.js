@@ -14,9 +14,8 @@ function getAll(done) {
       return;
     }
 
-    db.collection('moodData')
-      .find()
-      .toArray(done);
+    db.collection('mood')
+      .find();
   });
 }
 

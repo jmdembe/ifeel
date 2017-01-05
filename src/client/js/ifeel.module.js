@@ -34,7 +34,9 @@
         url: '/confirm',
         templateUrl: 'views/confirm.template.html',
         controller: 'MoodController',
-        controllerAs: 'mood'
+        controllerAs: 'mood',
+        params: {themood: null}
+
       });
   }
 }());

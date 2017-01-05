@@ -7,25 +7,14 @@
     MoodService.$inject = ['$http'];
 
     function MoodService($http) {
-      var record = {};
 
       return {
-        plotMood: plotMood,
-        plotDiary: plotDiary,
         createToday: createToday
       };
 
-      function plotMood(mood) {
-        record.mood=mood;
-      }
-
-      function plotDiary(entry) {
-        record.entry=entry;
+      function createToday(record) {
         record.date=Date.now();
         console.log(record);
-      }
-
-      function createToday(record) {
         return $http({
             url: '/mood',
             data: angular.toJson(record),
