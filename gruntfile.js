@@ -136,7 +136,9 @@ module.exports = function(grunt) {
             'node_modules/angular-mocks/angular-mocks.js',
             'src/client/js/ifeel.module.js',
             'src/client/js/login.service.js',
-            'test/specs/login.service.spec.js'
+            'test/specs/login.service.spec.js',
+            'src/client/js/mood.service.js',
+            'test/specs/mood.service.spec.js'
           ]
         }
       }
