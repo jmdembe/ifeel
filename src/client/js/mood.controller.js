@@ -17,6 +17,7 @@
       this.userProfile = null;
       var vm=this;
       this.record.profile = LoginService.retrieveProfileInfo();
+      this.record.postDate=Date.now();
       this.floop = "asdf";
 
       /**
