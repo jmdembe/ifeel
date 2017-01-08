@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('ifeel', ['ui.router'])
+  angular.module('ifeel', ['ui.router', 'chart.js'])
     .config(routerConfig);
 
   routerConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
