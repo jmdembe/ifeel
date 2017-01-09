@@ -48,6 +48,7 @@
           vm.record.entry = entry;
           console.log(entry);
           MoodService.createToday(vm.record);
+          $state.go('chart');
         }
       };
 
