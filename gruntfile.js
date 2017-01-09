@@ -133,7 +133,7 @@ module.exports = function(grunt) {
         browsers:['PhantomJS'],
         singleRun: true,
         preprocessors: {
-          'src/js/**/*.js': ['coverage']
+          'src/client/js/**/*.js': ['coverage']
         },
         reporters: ['dots', 'coverage'],
         coverageReporter: {
@@ -146,6 +146,8 @@ module.exports = function(grunt) {
             'node_modules/angular/angular.js',
             'node_modules/angular-ui-router/release/angular-ui-router.js',
             'node_modules/angular-mocks/angular-mocks.js',
+            'node_modules/chart.js/dist/Chart.js',
+            'node_modules/angular-chart.js/dist/angular-chart.js',
             'src/client/js/ifeel.module.js',
             'src/client/js/login.service.js',
             'test/specs/login.service.spec.js',
