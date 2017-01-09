@@ -8,7 +8,6 @@
 
     function MoodController(MoodService, LoginService, $state, $stateParams) {
       console.log('Creating Mood Controller');
-      console.log($stateParams);
       this.userMood={};
       this.userJournal = {};
       this.mood = null;
@@ -18,7 +17,6 @@
       var vm=this;
       this.record.profile = LoginService.retrieveProfileInfo();
       this.record.postDate=Date.now();
-      this.floop = "asdf";
 
       /**
        * getMood takes the user click (the user's mood) and sends the mood to the service and the
@@ -40,7 +38,7 @@
      * service for storage
      *
      * @param  {String} entry The users journal entry on their mood
-     * @return {VOID}       [description]
+     * @return {VOID}
      */
       vm.getJournal = function getJournal(entry) {
         if(!$stateParams.theMood) {

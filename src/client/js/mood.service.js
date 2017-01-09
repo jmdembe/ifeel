@@ -10,7 +10,6 @@
 
       return {
         createToday: createToday,
-        getAll: getAll
       };
 
       function createToday(record) {
@@ -23,17 +22,6 @@
             headers: {
               'Content-Type': 'application/json'
             }
-        })
-        .then(function successHandler(response) {
-          return response.data;
-        });
-      }
-
-      function getAll() {
-        return $http({
-            url: '/mood',
-            method: 'GET',
-            dataType: 'json'
         })
         .then(function successHandler(response) {
           return response.data;

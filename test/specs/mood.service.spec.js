@@ -37,18 +37,11 @@
         .respond('At the home template');
     }));
 
-    it('Should be a function to save to the database', function(doneCallback) {
+    it('Should be a function to save to the database', function() {
       var result = MoodService.createToday({"mood":"great", 'postDate': 1483711914100});
       expect(result).to.be.an('object');
       expect(result.then).to.be.a('function');
       expect(result.catch).to.be.a('function');
-
-      result
-        .then(function(data) {
-          expect(data.mood).to.equal("great");
-          doneCallback();
-        });
-      $httpBackend.flush();
     });
   });
 }());
