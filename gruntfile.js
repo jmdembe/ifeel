@@ -68,8 +68,20 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'node_modules/angular-ui-router/release',
-            src: [ 'angular-ui-router.js' ],
+            src: ['angular-ui-router.js'],
             dest: 'build/js/'
+          },
+          {
+            expand: true,
+            cwd: 'node_modules/angular-chart.js/dist',
+            src: ['angular-chart.min.js'],
+            dest: 'build/js'
+          },
+          {
+            expand: true,
+            cwd: 'node_modules/chart.js/dist',
+            src: ['chart.min.js'],
+            dest: 'build/js'
           }
         ]
       },
