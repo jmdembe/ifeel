@@ -2,11 +2,11 @@
   'use strict';
 
   angular.module('ifeel')
-    .controller('LineCtrl', LineCtrl);
+    .controller('Chart', Chart);
 
-    LineCtrl.$inject = ['$state', 'MoodService'];
+    Chart.$inject = ['MoodService'];
 
-    function LineCtrl($state, MoodService) {
+    function Chart($state, MoodService) {
       // TODO: Get all the dates from server.
       console.log(arguments);
       this.labels = MoodService.getAll().postDate;

@@ -38,7 +38,13 @@
         params: {
           theMood: null,
         }
-
+      })
+      .state({
+        name: 'chart',
+        url: '/analysis',
+        templateUrl: 'views/charts.template.html',
+        controller: 'ChartController',
+        controllerAs: 'chart'
       });
   }
 }());
