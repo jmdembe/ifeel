@@ -40,7 +40,7 @@
         }
       })
       .state({
-        name: 'chart',
+        name: 'analysis',
         url: '/analysis',
         templateUrl: 'views/charts.template.html',
         controller: 'ChartController',
