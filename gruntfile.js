@@ -74,13 +74,13 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'node_modules/angular-chart.js/dist',
-            src: ['angular-chart.min.js'],
+            src: ['angular-chart.js'],
             dest: 'build/js'
           },
           {
             expand: true,
             cwd: 'node_modules/chart.js/dist',
-            src: ['chart.min.js'],
+            src: ['Chart.js'],
             dest: 'build/js'
           }
         ]
