@@ -4,9 +4,9 @@
   angular.module('ifeel')
     .controller('ChartController', ChartController);
 
-    ChartController.$inject = ['MoodService'];
+    ChartController.$inject = ['$filter', 'MoodService'];
 
-    function ChartController(MoodService) {
+    function ChartController($filter, MoodService) {
       this.labels = [];
       this.data = [];
       var vm = this;
@@ -15,7 +15,7 @@
         .then(function addDataToScope(moodRecords){
           console.log('got mood data', moodRecords);
           vm.labels = moodRecords.map(function getLabels(moodRecord) {
-            return moodRecord.createTime;
+            return $filter('date')(moodRecord.createTime, 'dd/MM/yyyy');
           });
           vm.data = moodRecords.map(function getData(moodRecord) {
             if (moodRecord.mood === 'angry') {
