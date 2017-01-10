@@ -11,7 +11,9 @@
         res.status(500).send("I dont know what is wrong with the server...");
         return;
       }
+      console.log("i am inside moodModel.getAll");
       res.json(data);
+      console.log("done receiving data");
     });
   });
 
@@ -27,7 +29,8 @@
         'id' :data.ops[0]._id,
         'date': data.ops[0].date,
         'mood': data.ops[0].mood,
-        'entry': data.ops[0].entry
+        'entry': data.ops[0].entry,
+        'profile': data.ops[0].profile
       });
     });
   });

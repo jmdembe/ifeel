@@ -3,7 +3,6 @@ var dbConnect=require('./db-connect');
 
 module.exports = {
   getAll,
-  getToday,
   createToday
 };
 
@@ -15,12 +14,18 @@ function getAll(done) {
     }
 
     db.collection('mood')
-      .find();
+      .find()
+      .toArray(function completedArray(err, data) {
+        var cleanData = data.map(function moodMap(data) {
+          return {
+            "entry": data.entry,
+            "mood": data.mood,
+            "postDate": data.postDate
+          };
+        });
+        done(err, cleanData);
+      });
   });
-}
-
-function getToday() {
-
 }
 
 function createToday(data, done) {
