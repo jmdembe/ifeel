@@ -1,6 +1,5 @@
-    <h1>Hello</h1>
+    <h1 class='greeting'>Welcome back!</h1>
     <form name='intake' ng-submit='mood.getMood(mood.userMood)'>
-      <legend>Hello friend!</legend>
       <fieldset class='feeling'>
         <input type='image' alt='angry' name='angry' ng-click='mood.userMood= "angry"' src='/img/Angry-Smiley-Face-300px.png'>
         <input type='image' alt='unhappy' name='notgood' ng-click='mood.userMood="notgood"'src='/img/Unhappy-Face-300px.png'>
@@ -8,11 +7,4 @@
         <input type='image' alt='good' name='good' ng-click='mood.userMood="good"' src='/img/Sincere-Smiley-Face-300px.png'>
         <input type='image' alt='great' name='great' ng-click='mood.userMood="great"' src='/img/Awesome-smiley-300px0.png'>
       </fieldset>
-      <nav>
-        <ul>
-          <li><a>Diary</a></li>
-          <li><a>Progress</a></li>
-          <li class='crisis'><a>Crisis</a></li>
-          <li><a>About this app</a></li>
-      </nav>
     </form>
