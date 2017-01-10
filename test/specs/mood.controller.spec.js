@@ -14,7 +14,7 @@
       }));
 
       beforeEach(inject(function($controller) {
-        mockMoodService.createToday = function() {
+        mockMoodService.getAll = function() {
           return [
             {
               "_id": "586fa5aa3b5c861bf8ddb5b9",
