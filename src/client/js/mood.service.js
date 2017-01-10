@@ -40,7 +40,6 @@
        * @return {Promise}
        */
       function getAll() {
-        console.log('Getting all posts');
         return $http({
           url: '/mood',
           method: 'GET',
