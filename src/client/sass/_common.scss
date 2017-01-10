@@ -6,3 +6,16 @@ body {
 .g-signin2 {
   margin: 0 auto;
 }
+
+footer {
+  text-align: center;
+}
+
+img {
+  @include square(150px);
+}
+
+.emphasis {
+  display: inline;
+  font-weight: $boldWeight;
+}
