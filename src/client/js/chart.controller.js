@@ -7,41 +7,30 @@
     ChartController.$inject = ['MoodService'];
 
     function ChartController(MoodService) {
-      this.moodRecordsData = null;
+      this.labels = [];
+      this.data = [];
       var vm = this;
 
       MoodService.getAll()
-        .then(function addDataToScope(data){
-          vm.moodRecordsData = data;
+        .then(function addDataToScope(moodRecords){
+          console.log('got mood data', moodRecords);
+          vm.labels = moodRecords.map(function getLabels(moodRecord) {
+            return moodRecord.createTime;
+          });
+          vm.data = moodRecords.map(function getData(moodRecord) {
+            if (moodRecord.mood === 'angry') {
+              return 1;
+            } else if (moodRecord.mood === 'notgood') {
+              return 2;
+            } else if (moodRecord.mood === 'okay') {
+              return 3;
+            } else if (moodRecord.mood === 'good') {
+              return 4;
+            } else {
+              return 5;
+            }
+          });
         });
 
-      this.labels = ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-      this.series = ['Series A', 'Series B'];
-      this.data = [
-        [65, 59, 80, 81, 56, 55, 40],
-        [28, 48, 40, 19, 86, 27, 90]
-      ];
-      this.onClick = function (points, evt) {
-        console.log(points, evt);
-      };
-      this.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
-      this.options = {
-        scales: {
-          yAxes: [
-            {
-              id: 'y-axis-1',
-              type: 'linear',
-              display: true,
-              position: 'left'
-            },
-            {
-              id: 'y-axis-2',
-              type: 'linear',
-              display: true,
-              position: 'right'
-            }
-          ]
-        }
-      };
     }
 }());
