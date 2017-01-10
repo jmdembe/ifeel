@@ -19,6 +19,7 @@
         .whenPOST('/mood')
         .respond({
           "_id": "586fa5aa3b5c861bf8ddb5b9",
+          'entry': "...",
           "profile": {
             "Eea": "110514567623357669787",
             "ig": "Jessica Dembe",
@@ -35,18 +36,18 @@
         $httpBackend
           .whenGET('/mood')
           .respond({
-            "_id": "586fa5aa3b5c861bf8ddb5b9",
-            "profile": {
-              "Eea": "110514567623357669787",
-              "ig": "Jessica Dembe",
-              "ofa": "Jessica",
-              "wea": "Dembe",
-              "Paa": "https://lh4.googleusercontent.com/-MHhjrb1-pxo/AAAAAAAAAAI/AAAAAAAAAaU/ZOB30-gKm1g/s96-c/photo.jpg",
-              "U3": "jmdembe@gmail.com"
-            },
-            "mood": "great",
-            "postDate": 1483711914100,
-            "createTime": 1483711914160
+              "_id": "587502d85dda62510e0c02b1",
+              "profile": {
+                "Eea": "110514567623357669787",
+                "ig": "Jessica Dembe",
+                "ofa": "Jessica",
+                "wea": "Dembe",
+                "Paa": "https://lh4.googleusercontent.com/-MHhjrb1-pxo/AAAAAAAAAAI/AAAAAAAAAaU/ZOB30-gKm1g/s96-c/photo.jpg",
+                "U3": "jmdembe@gmail.com"
+              },
+              "mood": "good",
+              "entry": "I am happy today.",
+              "createTime": 1484063448982
           });
 
       $httpBackend
