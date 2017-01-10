@@ -152,7 +152,9 @@ module.exports = function(grunt) {
             'src/client/js/login.service.js',
             'test/specs/login.service.spec.js',
             'src/client/js/mood.service.js',
-            'test/specs/mood.service.spec.js'
+            'test/specs/mood.service.spec.js',
+            'src/client/js/mood.controller.js',
+            'test/specs/mood.controller.spec.js'
           ]
         }
       }
