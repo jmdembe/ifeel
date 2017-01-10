@@ -36,7 +36,7 @@
         controller: 'MoodController',
         controllerAs: 'mood',
         params: {
-          theMood: null,
+          theMood: null
         }
       })
       .state({

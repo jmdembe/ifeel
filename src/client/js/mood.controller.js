@@ -16,7 +16,8 @@
       this.userProfile = null;
       var vm=this;
       this.record.profile = LoginService.retrieveProfileInfo();
-      this.record.postDate=Date.now();
+      this.myData = null;
+      this.labels = null;
 
       /**
        * getMood takes the user click (the user's mood) and sends the mood to the service and the
@@ -46,11 +47,11 @@
         } else {
           vm.record.mood = $stateParams.theMood;
           vm.record.entry = entry;
-          MoodService.createToday(vm.record);
-          $state.go('analysis');
-        }
+          MoodService.createToday(vm.record)
+            .then(function data() {
+              $state.go('analysis');
+            });
+          }
       };
-
-
     }
 }());
