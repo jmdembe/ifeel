@@ -15,15 +15,16 @@ function getAll(done) {
 
     db.collection('mood')
       .find()
-      .toArray(function completedArray(err, data) {
-        var cleanData = data.map(function moodMap(data) {
-          return {
-            "entry": data.entry,
-            "mood": data.mood,
-            "postDate": data.postDate
-          };
+      .toArray(function completedArray(err, moodRecords) {
+        if(err) {
+          done(err, null);
+          return;
+        }
+        var cleanData = moodRecords.map(function moodMap(moodRecord) {
+          return moodRecord;
         });
-        done(err, cleanData);
+        console.log("Cleaned mood records", cleanData);
+        done(null, cleanData);
       });
   });
 }
@@ -36,7 +37,7 @@ function createToday(data, done) {
         }
 
         data.createTime = Date.now();
-        db.collection('moodData')
+        db.collection('mood')
             .insert(data, done);
     });
 }
