@@ -38,6 +38,7 @@
 
       it('Should have all needed scope variables', function(){
           expect(MoodController.userMood).to.be.an('object');
+          expect(Object.keys(MoodController.userMood).length).to.equal(0);
       });
     });
 }());
