@@ -45,6 +45,16 @@
         templateUrl: 'views/charts.template.html',
         controller: 'ChartController',
         controllerAs: 'chart'
+      })
+      .state({
+        name: 'helpline',
+        url: '/helpline',
+        templateUrl: 'views/helpline.template.html'
+      })
+      .state({
+        name: 'about',
+        url: '/about',
+        templateUrl: 'views/about.template.html'
       });
   }
 }());
