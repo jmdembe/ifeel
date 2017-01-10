@@ -2,3 +2,8 @@
   width: $size;
   height: $size;
 }
+
+@mixin chartSize($length, $width) {
+  width: $width;
+  height: $height;
+}
