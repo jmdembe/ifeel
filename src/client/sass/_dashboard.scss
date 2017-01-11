@@ -1,24 +1,25 @@
 form {
   margin: 0 auto;
-}
 
-fieldset {
-  border: none;
-}
+  fieldset {
+    border: none;
+  }
 
-legend  {
-  text-align: center;
+  legend  {
+    text-align: center;
+  }
+
+  input {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
 }
 
 label {
   display: block;
 }
 
-input {
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-}
 
 img {
   padding: .25em;
@@ -26,4 +27,8 @@ img {
 
 canvas {
   margin: 0 auto;
+}
+
+#my-login-button {
+  text-align: center;
 }

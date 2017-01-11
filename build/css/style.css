@@ -44,6 +44,9 @@ img {
 canvas {
   margin: 0 auto; }
 
+#my-login-button {
+  text-align: center; }
+
 footer {
   text-align: center;
   font-weight: 300; }
