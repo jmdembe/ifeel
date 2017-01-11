@@ -42,10 +42,15 @@ img {
   padding: .25em; }
 
 canvas {
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 320px;
+  width: 480px; }
 
-#my-login-button {
+.google-button {
   text-align: center; }
+
+section .org-title {
+  margin-bottom: .5em; }
 
 footer {
   text-align: center;

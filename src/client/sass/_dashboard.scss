@@ -27,8 +27,13 @@ img {
 
 canvas {
   margin: 0 auto;
+  @include chartSize($chartHeight, $chartWidth);
 }
 
-#my-login-button {
+.google-button {
   text-align: center;
+}
+
+section .org-title {
+  margin-bottom: .5em;
 }
