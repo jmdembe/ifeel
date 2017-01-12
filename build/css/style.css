@@ -17,12 +17,13 @@ img {
   font-weight: 700; }
 
 h1 {
-  color: #111111;
+  color: #1E515F;
   text-align: center;
   font-weight: bold; }
 
 h2 {
-  text-align: center; }
+  text-align: center;
+  font-family: 'Shadows Into Light', cursive; }
 
 form {
   margin: 0 auto; }
@@ -42,7 +43,7 @@ img {
   padding: .25em; }
 
 canvas {
-  margin: 0 auto;
+  text-align: left;
   height: 320px;
   width: 480px; }
 
@@ -52,29 +53,34 @@ canvas {
 section .org-title {
   margin-bottom: .5em; }
 
+.diary {
+  height: 320px;
+  width: 480px; }
+
 footer {
   text-align: center;
   font-weight: 300; }
   footer nav {
-    width: 100%; }
+    width: 100%;
+    border-top: 8px;
+    border-bottom: 8px;
+    padding: 10px; }
   footer li {
+    background-color: #0086AB;
     display: inline;
     padding: 10px;
     border-radius: 10px; }
-
-.crisis {
-  background-color: #FF0000;
-  opacity: 0.5; }
+    footer li:hover {
+      background-color: #03a2ce;
+      transition: background-color 0.3s linear; }
 
 a {
   font-weight: 700;
-  color: #333333; }
-  a:hover {
-    text-decoration: none; }
-
-.crisis a {
-  color: #111111;
-  font-weight: bold; }
+  color: #FFFFFF;
+  padding: 8px;
+  text-decoration: none; }
+  a.start {
+    color: #000000; }
 
 ul {
   text-align: center;

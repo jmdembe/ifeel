@@ -93,6 +93,7 @@
       "expect"      : true,
       "gapi"        : true,
       "inject"      : true,
-      "karma"       : true
+      "karma"       : true,
+      "undefined"   : true
       }        // additional predefined global variables
 }
