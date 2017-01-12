@@ -1,6 +1,8 @@
 (function() {
   'use strict';
 
+  var expect = chai.expect;
+
   describe('Login Controller', function () {
     var LoginController;
     var mockLoginService = {};

@@ -1,9 +1,9 @@
 (function() {
   'use strict';
 
-  // var expect = chai.expect;
+  var expect = chai.expect;
 
-  describe ('Chart Controller', function(){
+  describe('Chart Controller', function(){
     // var ChartController;
     var ChartController;
     var mockMoodService = {};
@@ -16,6 +16,9 @@
 
     beforeEach(inject(function($controller) {
       mockMoodService.getAll = function() {
+
+        mockMoodService.getAll.numTimesCalled++;
+
         return [
           {
             "_id": "58751a225dda62510e0c02b5",
@@ -33,17 +36,18 @@
           }
         ];
       };
-
-      mockMoodService.spy = function(argOne) {
-        mockMoodService.spy.numTimesCalled++;
-        mockMoodService.spy.lastArgument = argOne;
-      };
+      mockMoodService.getAll.numTimesCalled = 0;
 
       ChartController=$controller('ChartController');
     }));
 
-    it('Should get the records from the database', function() {
+    it('should have all the scope variables that it is supposed to', function() {
+      expect(ChartController.labels).to.be.an('array');
+      expect(ChartController.data).to.be.an('array');
+    });
 
+    it('Should get the records from the database', function() {
+      expect(mockMoodService.getAll.numTimesCalled).to.equal(1);
     });
 
   });
