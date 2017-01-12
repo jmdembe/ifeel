@@ -26,7 +26,8 @@ img {
 }
 
 canvas {
-  margin: 0 auto;
+
+  text-align: left;
   @include chartSize($chartHeight, $chartWidth);
 }
 
@@ -36,4 +37,8 @@ canvas {
 
 section .org-title {
   margin-bottom: .5em;
+}
+
+.diary {
+  @include chartSize($chartHeight, $chartWidth);
 }

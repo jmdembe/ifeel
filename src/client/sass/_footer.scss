@@ -4,32 +4,34 @@ footer {
 
   nav {
     width: 100%;
+    border-top: 8px;
+    border-bottom: 8px;
+    padding: 10px;
   }
 
   li {
+    background-color: $linkBackgroundColor;
     display: inline;
     padding: $linkPadding;
     border-radius: $linkPadding;
-  }
-}
 
-.crisis {
-  background-color: $crisisColor;
-  opacity: $opaque;
+    &:hover {
+      background-color: #03a2ce;
+      transition: $buttonTransition;
+    }
+
+  }
 }
 
 a {
   font-weight: $boldWeight;
   color: $linkColor;
+  padding: $paddingSize;
+  text-decoration: none;
 
-  &:hover {
-    text-decoration: none;
+  &.start {
+    color: $startLinkColor;
   }
-}
-
-.crisis a {
-  color: $headerColor;
-  font-weight: bold;
 }
 
 ul {
