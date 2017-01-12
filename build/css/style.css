@@ -18,12 +18,14 @@ img {
 
 h1 {
   color: #1E515F;
-  text-align: center;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 2.5em;
+  text-align: center; }
 
 h2 {
-  text-align: center;
-  font-family: 'Shadows Into Light', cursive; }
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2em;
+  text-align: center; }
 
 form {
   margin: 0 auto; }
@@ -36,27 +38,22 @@ form {
     display: block;
     text-align: center; }
 
-label {
-  display: block; }
-
 img {
   padding: .25em; }
-
-canvas {
-  text-align: left;
-  height: 320px;
-  width: 480px; }
-
-.google-button {
-  text-align: center; }
 
 section .org-title {
   margin-bottom: .5em; }
 
-.diary {
+.chart {
   height: 320px;
-  width: 480px; }
+  width: 100%; }
 
+@media screen and (min-width: 800px) {
+  .option {
+    display: inline;
+    width: 18%;
+    height: 18%;
+    padding: 8px; } }
 footer {
   text-align: center;
   font-weight: 300; }
@@ -67,11 +64,10 @@ footer {
     padding: 10px; }
   footer li {
     background-color: #0086AB;
-    display: inline;
     padding: 10px;
     border-radius: 10px; }
     footer li:hover {
-      background-color: #03a2ce;
+      background-color: #0A9AC1;
       transition: background-color 0.3s linear; }
 
 a {
@@ -86,5 +82,10 @@ ul {
   text-align: center;
   width: 100%;
   padding: 0; }
+
+@media screen and (min-width: 800px) {
+  li {
+    display: inline;
+    margin: 5px; } }
 
 /*# sourceMappingURL=style.css.map */

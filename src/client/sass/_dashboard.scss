@@ -16,29 +16,24 @@ form {
   }
 }
 
-label {
-  display: block;
-}
 
 
 img {
   padding: .25em;
 }
 
-canvas {
-
-  text-align: left;
-  @include chartSize($chartHeight, $chartWidth);
-}
-
-.google-button {
-  text-align: center;
-}
-
 section .org-title {
   margin-bottom: .5em;
 }
 
-.diary {
+.chart {
   @include chartSize($chartHeight, $chartWidth);
+}
+
+@media screen and (min-width: 800px) {
+  .option {
+    display: inline;
+    @include square($inputSize);
+    padding: $paddingSize;
+  }
 }

@@ -5,12 +5,17 @@ $boldWeight: 700;
 $boldText: bold;
 $buttonTransition: background-color .3s linear;
 $chartHeight: 320px;
-$chartWidth: 480px;
+$chartWidth: 100%;
 $headerColor: #1E515F;
 $linkBackgroundColor: #0086AB;
 $linkColor: #FFFFFF;
 $linkPadding: 10px;
 $lightWeight: 300;
+$mobileMargin: 5px;
 $paddingSize: 8px;
+$screenWidth: 90%;
 $startLinkColor: #000000;
 $titleBottomPadding: .5em;
+
+// Styles that require math
+$inputSize: $screenWidth/5;
