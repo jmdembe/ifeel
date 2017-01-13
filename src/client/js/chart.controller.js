@@ -13,7 +13,6 @@
 
       MoodService.getAll()
         .then(function addDataToScope(moodRecords){
-          console.log('got mood data', moodRecords);
           vm.labels = moodRecords.map(function getLabels(moodRecord) {
             return $filter('date')(moodRecord.createTime, 'MM/dd/yyyy hh:mm');
           });

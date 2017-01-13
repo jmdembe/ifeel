@@ -74,7 +74,6 @@
 
       MoodService.getAll()
         .then(function addDataToScope(moodRecords){
-          console.log('got mood data', moodRecords);
           vm.labels = moodRecords.map(function getLabels(moodRecord) {
             return $filter('date')(moodRecord.createTime, 'MM/dd/yyyy hh:mm');
           });
@@ -140,7 +139,6 @@
         'longtitle': true,
         'theme': 'dark',
         'onsuccess': successHandler,
-        // 'onfailure': onFailure
       });
       }
     }
@@ -170,9 +168,7 @@
      * @return {VOID}      [description]
      */
     function storeBasicProfile(user) {
-      console.log(user);
       profile = user.getBasicProfile();
-      console.log('profile info', profile);
     }
 
     /**
@@ -197,7 +193,6 @@
     MoodController.$inject = ['MoodService', 'LoginService', '$state', '$stateParams'];
 
     function MoodController(MoodService, LoginService, $state, $stateParams) {
-      console.log('Creating Mood Controller');
       this.userMood={};
       this.userJournal = {};
       this.mood = null;
@@ -217,7 +212,6 @@
        */
       vm.getMood = function getMood(mood) {
         vm.mood=mood;
-        console.log('This is your mood', mood);
         $state.go('submitted', {
           theMood: vm.mood,
           theName: vm.userName
@@ -277,7 +271,6 @@
             }
         })
         .then(function successHandler(response) {
-          console.log(response.data);
           return response.data;
         });
       }

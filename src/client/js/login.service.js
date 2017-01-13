@@ -22,9 +22,7 @@
      * @return {VOID}      [description]
      */
     function storeBasicProfile(user) {
-      console.log(user);
       profile = user.getBasicProfile();
-      console.log('profile info', profile);
     }
 
     /**

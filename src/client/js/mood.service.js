@@ -29,7 +29,6 @@
             }
         })
         .then(function successHandler(response) {
-          console.log(response.data);
           return response.data;
         });
       }

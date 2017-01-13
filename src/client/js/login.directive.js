@@ -24,7 +24,6 @@
         'longtitle': true,
         'theme': 'dark',
         'onsuccess': successHandler,
-        // 'onfailure': onFailure
       });
       }
     }

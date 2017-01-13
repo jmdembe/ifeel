@@ -22,17 +22,6 @@ footer {
   }
 }
 
-a {
-  font-weight: $boldWeight;
-  color: $linkColor;
-  padding: $paddingSize;
-  text-decoration: none;
-
-  &.start {
-    color: $startLinkColor;
-  }
-}
-
 ul {
   text-align: center;
   width: 100%;

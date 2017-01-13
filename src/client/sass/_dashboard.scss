@@ -16,21 +16,45 @@ form {
   }
 }
 
+a {
+  font-weight: $boldWeight;
+  color: $linkColor;
+  padding: $linkPadding;
+  border-radius: $linkPadding;
+  text-decoration: none;
 
 
-img {
-  padding: .25em;
+  &.start {
+      background-color: #06576d;
+  }
+
+  &:hover {
+    background-color: #0A9AC1;
+    transition: $buttonTransition;
+  }
 }
 
-section .org-title {
-  margin-bottom: .5em;
+p {
+  margin-left: $marginLeft;
+
+  & .info {
+    margin-bottom: 0;
+  }
+
 }
 
-.chart {
-  @include chartSize($chartHeight, $chartWidth);
-}
+section {
+  margin: 0 auto;
 
-@media screen and (min-width: 800px) {
+  &.org-title {
+    margin-bottom: 0;
+  }
+
+  &.about {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: $desktopWidth) {
   .option {
     display: inline;
     @include square($inputSize);

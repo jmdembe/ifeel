@@ -12,10 +12,6 @@ img {
   width: 150px;
   height: 150px; }
 
-.emphasis {
-  display: inline;
-  font-weight: 700; }
-
 h1 {
   color: #1E515F;
   font-weight: bold;
@@ -25,7 +21,8 @@ h1 {
 h2 {
   font-family: 'Shadows Into Light', cursive;
   font-size: 2em;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 0; }
 
 form {
   margin: 0 auto; }
@@ -38,15 +35,29 @@ form {
     display: block;
     text-align: center; }
 
-img {
-  padding: .25em; }
+a {
+  font-weight: 700;
+  color: #FFFFFF;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none; }
+  a.start {
+    background-color: #06576d; }
+  a:hover {
+    background-color: #0A9AC1;
+    transition: background-color 0.3s linear; }
 
-section .org-title {
-  margin-bottom: .5em; }
+p {
+  margin-left: 28px; }
+  p .info {
+    margin-bottom: 0; }
 
-.chart {
-  height: 320px;
-  width: 100%; }
+section {
+  margin: 0 auto; }
+  section.org-title {
+    margin-bottom: 0; }
+  section.about {
+    margin: 0 auto; }
 
 @media screen and (min-width: 800px) {
   .option {
@@ -69,14 +80,6 @@ footer {
     footer li:hover {
       background-color: #0A9AC1;
       transition: background-color 0.3s linear; }
-
-a {
-  font-weight: 700;
-  color: #FFFFFF;
-  padding: 8px;
-  text-decoration: none; }
-  a.start {
-    color: #000000; }
 
 ul {
   text-align: center;

@@ -14,8 +14,3 @@ footer {
 img {
   @include square(150px);
 }
-
-.emphasis {
-  display: inline;
-  font-weight: $boldWeight;
-}
