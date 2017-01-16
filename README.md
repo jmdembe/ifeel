@@ -19,4 +19,4 @@ iFeel is my capstone project for The Iron Yard Front-End Engineering course in D
   3. To view the project, run a node server using ```node .``` or ```nodemon .```
 
 #Testing
-All code written for iFeel was tested with ```grunt karma```. Once all dependencies are installed per the above installation instructions, you can test code by running ```grunt test```.
+All code written for iFeel was tested with mocha. Once all dependencies are installed per the above installation instructions, you can test code by running ```grunt test```.
