@@ -1,7 +1,7 @@
 # iFeel
 iFeel is my capstone project for The Iron Yard Front-End Engineering course in December 2016-January 2017. iFeel is an app that uses technology to impact positive mental health behavior change. iFeel is designed to be adapted for users of all ages, reading levels, and disability.
 
-**iFeel** an anxiety and depression management tool to help users track their mood as well as document reasons in mood changes. This app can help to manage anxiety and depression symptoms as a person is receiving mental health treatment.
+**iFeel** is an anxiety and depression management tool to help users track their mood as well as document reasons in mood changes. This app can help to manage anxiety and depression symptoms as a person is receiving mental health treatment.
 
 [Live preview](https://ifeels.herokuapp.com/#!/)
 
