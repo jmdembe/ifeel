@@ -37,8 +37,9 @@ a {
 p {
   margin-left: $marginLeft;
 
-  & .info {
+  .info {
     margin-bottom: 0;
+    text-align: center;
   }
 
 }

@@ -50,7 +50,8 @@ a {
 p {
   margin-left: 28px; }
   p .info {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-align: center; }
 
 section {
   margin: 0 auto; }
