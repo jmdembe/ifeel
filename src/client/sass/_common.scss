@@ -12,5 +12,5 @@ footer {
 }
 
 img {
-  @include square(150px);
+  @include square($imageSize);
 }
