@@ -207,7 +207,7 @@
       /**
        * getMood takes the user click (the user's mood) and sends the mood to the service and the
        *
-       * @param  {String} mood [description]
+       * @param  {String} mood Based on what image the user clicks, mood will be assigned to the newly-creatd record.
        * @return {VOID}
        */
       vm.getMood = function getMood(mood) {
